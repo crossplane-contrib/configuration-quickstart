@@ -77,7 +77,7 @@ configuration package](https://docs.crossplane.io/latest/concepts/packages/)
 so there is a single command to install it:
 
 ```console
-crossplane xpkg install xpkg.crossplane.io/crossplane-contrib/configuration-quickstart:v0.1.0
+crossplane xpkg install configuration xpkg.crossplane.io/crossplane-contrib/configuration-quickstart:v0.1.0
 ```
 
 Validate the install by inspecting the provider and configuration packages:
