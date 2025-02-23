@@ -1,3 +1,9 @@
+# This package is manually built/pushed to
+# ghcr.io/crossplane-contrib/configuration-quickstart, with something like:
+# ❯ export CR_PAT=<token>
+# ❯ echo $CR_PAT | docker login ghcr.io -u <user> --password-stdin
+# ❯ crossplane xpkg build -o configuration-quickstart.xpkg
+# ❯ crossplane xpkg push -f configuration-quickstart.xpkg ghcr.io/crossplane-contrib/configuration-quickstart:v0.1.0
 apiVersion: meta.pkg.crossplane.io/v1
 kind: Configuration
 metadata:
