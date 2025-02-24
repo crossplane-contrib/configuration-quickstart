@@ -1,12 +1,12 @@
 # configuration-quickstart
 
-An introductory example to Crossplane and Compositions using provider-nop. This enables provisioning of several different fake resource types.
+An introductory example to Crossplane and Compositions using provider-nop. This enables provisioning of several different fake resource types for testing and educational purposes.
 
 This repository contains a reference configuration for [Crossplane](https://crossplane.io). This configuration uses [provider-nop](https://github.com/crossplane-contrib/provider-nop), a Crossplane provider that simulates the creation of external resources.
 
 ## Overview
 
-The configuration offers an APIs for setting up a mock database resource. This configuration also demonstrates the power of Crossplane to build abstractions called `compositions`, which assemble multiple basic resources into a more complex resource.
+The configuration offers an API for setting up a mock database resource. This configuration also demonstrates the power of Crossplane to build abstractions called `compositions`, which assemble multiple basic resources into a more complex resource.
 
 Learn more about Composite Resources in the [Crossplane
 Docs](https://docs.crossplane.io/latest/concepts/compositions/).
@@ -56,8 +56,7 @@ kind create cluster
 Enable the Crossplane Helm Chart repository:
 
 ```console
-helm repo add \
-crossplane-stable https://charts.crossplane.io/stable
+helm repo add crossplane-stable https://charts.crossplane.io/stable
 helm repo update
 ```
 
@@ -91,7 +90,7 @@ kubectl get configurations,configurationrevisions
 
 🎉 Congratulations. You have just installed your first Crossplane-powered platform.
 
-You can now use the control plane to request resources which will simulate getting provisioned in an external cloud service. You do this by creating "claims" against the APIs available on your control palne. Following the example below, create the claims directly:
+You can now use the control plane to request resources which will simulate getting provisioned in an external cloud service. You do this by creating "claims" against the APIs available on your control plane. Following the example below, create the claims directly:
 
 Create a mock database:
 ```console
