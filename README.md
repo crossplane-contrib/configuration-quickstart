@@ -104,6 +104,17 @@ resources:
 kubectl get claim,composite,managed
 ```
 
+Additionally, you can render out the tree of resources, starting from the claim:
+
+```console
+crossplane beta trace mockdatabase.quickstart.crossplane.io/database1
+
+NAME                                SYNCED   READY   STATUS
+MockDatabase/database1 (default)    True     True    Available
+└─ XMockDatabase/database1-v9l9t    True     True    Available
+   └─ NopResource/database1-v9l9t   True     True
+```
+
 To delete the provisioned resources, delete the claims:
 
 ```console
