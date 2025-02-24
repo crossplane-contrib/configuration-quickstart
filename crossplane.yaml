@@ -1,0 +1,24 @@
+# This package is manually built/pushed to
+# ghcr.io/crossplane-contrib/configuration-quickstart, with something like:
+# ❯ export CR_PAT=<token>
+# ❯ echo $CR_PAT | docker login ghcr.io -u <user> --password-stdin
+# ❯ crossplane xpkg build -o configuration-quickstart.xpkg
+# ❯ crossplane xpkg push -f configuration-quickstart.xpkg ghcr.io/crossplane-contrib/configuration-quickstart:v0.1.0
+apiVersion: meta.pkg.crossplane.io/v1
+kind: Configuration
+metadata:
+  name: configuration-quickstart
+  annotations:
+    meta.crossplane.io/maintainer: Upbound <support@upbound.io>
+    meta.crossplane.io/source: github.com/upbound/configuration-quickstart
+    meta.crossplane.io/license: Apache-2.0
+spec:
+  crossplane:
+    version: ">=v1.19.0"
+  dependsOn:
+    - provider: xpkg.upbound.io/crossplane-contrib/provider-nop
+      version: ">=v0.3.0"
+    - function: xpkg.upbound.io/crossplane-contrib/function-kcl
+      version: ">=v0.11.2"
+    - function: xpkg.upbound.io/crossplane-contrib/function-auto-ready
+      version: ">=v0.4.1"
