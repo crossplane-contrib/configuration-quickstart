@@ -118,6 +118,5 @@ kubectl delete configurations.pkg.crossplane.io configuration-quickstart
 
 ## Questions?
 
-For any questions, thoughts and comments don't hesitate to [reach
-out](https://www.upbound.io/contact) or drop by
-[slack.crossplane.io](https://slack.crossplane.io), and introduce yourself.
+For any questions, thoughts and comments [get involved](https://github.com/crossplane/crossplane?tab=readme-ov-file#get-involved) in the Crossplane community or drop by
+[slack.crossplane.io](https://slack.crossplane.io) and introduce yourself.
